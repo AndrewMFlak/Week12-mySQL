@@ -9,9 +9,9 @@ CREATE TABLE products(
 ID INT NOT NULL AUTO_INCREMENT,
 product_name VARCHAR(45) NOT NULL,
 department_name VARCHAR(45) NOT NULL,
-cost DECIMAL (10,2) NOT NULL,
-stock_quantity INTEGER (10) NULL,
-rating DECIMAL (10,2) NOT NULL,
+cost VARCHAR(45) NOT NULL,
+stock_quantity VARCHAR(45) NULL,
+rating VARCHAR(45) NOT NULL,
 PRIMARY KEY(id)
 );
 
