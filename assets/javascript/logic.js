@@ -73,7 +73,7 @@ function userSearch() {
                         console.log("Thank you for shopping with us! Your order of " + res[i].stock_quantity + " " + res[i].product_name + " is now being processed.");
                         var updatedInv = function () {
                             var updatedQty = parseInt(res[i].stock_quantity - answer.quantity);
-                            var sqlUpdate = "INSERT INTO products (product_name,department_name, cost, stock_quantity, rating) VALUES '+connection.escape("+res[i].product_name + ", " + res[i].department_name + ", " + res[i].cost+ ", " + updatedQty + ", " + res[i].rating +")";
+                            var sqlUpdate = "INSERT INTO products (product_name,department_name, cost, stock_quantity, rating) VALUES ("+res[i].product_name + ", " + res[i].department_name + ", " + res[i].cost+ ", " + updatedQty + ", " + res[i].rating +")";
                             connection.query(sqlUpdate, function (err, res) {
                                 if (err) throw err;
                                 console.log("item quantity is updated")
